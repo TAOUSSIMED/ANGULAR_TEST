@@ -20,6 +20,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import { ShadowDirective } from './utils/shadow.directive';
+import { FirstnamePipe } from './utils/firstname.pipe';
 
 
 
@@ -35,7 +36,8 @@ import { ShadowDirective } from './utils/shadow.directive';
     DriverDetailsComponent,
     VehicleComponent,
     VehicleDialogComponent,
-    ShadowDirective
+    ShadowDirective,
+    FirstnamePipe
 
 
 

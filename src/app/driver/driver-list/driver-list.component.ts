@@ -20,9 +20,9 @@ export class DriverListComponent {
 
 
   drivers : Driver[] = [
-    new Driver(0,"TAOUSSI", "MO", this.vehicles[0], "assets/Drivers/driver0.png"),
-    new Driver(1,"MOHAMED", "TA", this.vehicles[2], "assets/Drivers/driver1.png"),
-    new Driver(2,"SIMO", "TA", this.vehicles[1], "assets/Drivers/driver2.png")
+    new Driver(0,"tAOUSSI", "mO", this.vehicles[0], "assets/Drivers/driver0.png"),
+    new Driver(1,"mOHAMED", "tA", this.vehicles[2], "assets/Drivers/driver1.png"),
+    new Driver(2,"sIMO", "tA", this.vehicles[1], "assets/Drivers/driver2.png")
   ]
   constructor(private sanitizer: DomSanitizer) { }
 
