@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { Vehicle } from 'src/app/vehicle/vehicle';
 import { Driver } from '../driver';
@@ -9,6 +9,8 @@ import { Driver } from '../driver';
   styleUrls: ['./driver-list.component.css']
 })
 export class DriverListComponent {
+
+  @Output() driverSelected = new EventEmitter<Driver>();
 
   vehicles : Vehicle[] = [
     new Vehicle(0, "GOLF", 13, "M745P2"),
@@ -26,5 +28,9 @@ export class DriverListComponent {
 
   getImgContent(img: string): SafeUrl {
     return this.sanitizer.bypassSecurityTrustStyle(`url(${img})`);
+  }
+  ondriverselected(driver : Driver)
+  {
+    this.driverSelected.emit(driver);
   }
 }
